@@ -1,0 +1,14 @@
+{% extends 'layout/base.html' %} {% block content %} 
+
+<h1>Projects</h1>
+
+{% for project in projects %}
+<a href="{% url 'ver_proyecto' project.id %}">
+    <article class="card">
+        <h2>{{project.name}}</h2>
+    </article>
+</a>
+
+{% endfor %}
+
+{% endblock %}
